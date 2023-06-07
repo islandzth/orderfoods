@@ -13,6 +13,7 @@ class User extends Authenticatable
     const KITCHEN_ROLE = 2;
     const WAITER_ROLE = 3;
     const GENERAL_KITCHEN_ROLE = 100;
+    const EXPORT_ROLE = 10;
 
     /**
      * The attributes that are mass assignable.

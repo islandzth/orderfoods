@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\ExportAuthMiddleware;
 use App\Http\Middleware\GeneralKitchenAuth;
 use App\Http\Middleware\KitchenAuth;
 use App\Http\Middleware\OrderAuth;
@@ -67,5 +68,6 @@ class Kernel extends HttpKernel
         'order_auth' => OrderAuth::class,
         'kitchen_auth' => KitchenAuth::class,
         'general_kitchen_auth' => GeneralKitchenAuth::class,
+        'export_auth' => ExportAuthMiddleware::class,
     ];
 }

@@ -6,6 +6,12 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'HomeController@index')->name('home');
+
+    Route::group(['middleware' => 'export_auth'], function(){
+        Route::view('/export', 'order.export')->name('export');
+        Route::get('/exportToExcel','ExportController@exportToExcel')->name('exportToExcel');
+    });
+
     Route::group(['middleware' => 'order_auth'], function () {
         Route::get('/order/tables', 'OrderController@tables')->name('order.tables');
         Route::get('/order/tables/{tableId}', 'OrderController@tableDetail')->name('order.tables.detail');

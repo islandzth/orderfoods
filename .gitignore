@@ -15,3 +15,5 @@ yarn-error.log
 /socketIo/package-lock.json
 /socketIo/node_modules
 composer.lock
+order_kitchenbk.sql
+note.txt

@@ -35,6 +35,8 @@ class HomeController extends Controller
                return redirect(route('general-kitchen.by-order'));
            case User::WAITER_ROLE:
                return redirect(route('waiter.home'));
+           case User::EXPORT_ROLE:
+               return redirect(route('export'));
        }
 
         return redirect(route('order.tables'));
